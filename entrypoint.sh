@@ -4,7 +4,8 @@ case ${1} in
 	init)
 		;;
 	start)
-		mv /usr/src/app/* /data/
+		cp -Rf /usr/src/app/* /data/
+		rm -rf /usr/src/app/*
 		cd /data
 		./nodebb start
 		;;
